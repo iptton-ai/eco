@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=Zhi+Mang+Xing&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    font-variant-ligatures: contextual;
+  }
+
+  body {
+    @apply bg-dao-mist text-dao-ink font-sans antialiased;
+    background-image: theme('backgroundImage.dao-gradient');
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-dao-dusk tracking-wide;
+  }
+
+  p {
+    @apply text-lg leading-relaxed text-dao-dusk/80;
+  }
+
+  a {
+    @apply text-dao-bamboo hover:text-dao-pine transition-colors;
+  }
+}
+
+@layer components {
+  .dao-card {
+    @apply bg-white/80 backdrop-blur-md border border-dao-cloud rounded-3xl shadow-mist px-6 py-8;
+  }
+
+  .dao-section {
+    @apply flex flex-col gap-6 rounded-3xl border border-dao-cloud/60 bg-white/70 p-8 shadow-mist;
+  }
+}
